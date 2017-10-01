@@ -1,0 +1,56 @@
+<!--
+  Generated template for the CameraPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CAMERA TITLE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+  <h1>Camera Page !!</h1>
+
+  <button
+    ion-button
+    (click)="snapPic_DATAURL_EXIF()">SNAP DATA
+  </button>
+
+  <img [src]=[image_base64_display] class="img-thumbnail">
+
+  <button
+    ion-button
+    (click)="pingServer()">PING SERVER
+  </button>
+
+  <p>{{pingResponse}}</p>
+
+  <button
+    ion-button
+    (click)="postRequest()">POST IMAGE
+  </button>
+
+  <p>{{postResponse}}</p>
+
+  <p>LATITUDE: {{latitude}}</p>
+
+  <p>LONGITUDE: {{longitude}}</p>
+
+  <h3>ALL DATA</h3>
+  <textarea rows="10" cols="50" [(ngModel)]="imageData"></textarea>
+
+  <h3>META DATA</h3>
+  <textarea rows="10" cols="50" [(ngModel)]="metadata"></textarea>
+
+  <h3>POST DATA</h3>
+  <textarea rows="10" cols="50" [(ngModel)]="image_base64_post"></textarea>
+
+</ion-content>
